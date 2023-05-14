@@ -1,1 +1,11 @@
-# number_recognition
+# **Number Recognition**
+
+The goal of this project is create a model in python that can predict a number based on pixel data for an image of a number between 0 - 9. To do this I created an object for a Multivariate Logistic Regression Model which can be used for classification problems like this one. For this project the data I worked with was 5000 images of numbers each with a label. To run the model I devided the data 80-20 with 4000 examples being used to train the model and 1000 examples to test model accuracy. Overall the project model and data worked perfectly, however, I think it would've been a bonus to add an option to take in user input, so that a user could draw a number and then have the model predict what it is supposed to be. 
+
+
+The main project was split into 3 python files and two files for my data. My data consisted of two csv files, one with 5000 examples of pixel data for a 20x20 image of each number and another with the 5000 corresponding labels. The main project was split into `Model.py` which contained a get data function (grabs data from csv files), two mathematical functions (to be used in model training), and the Multivariate Logistic Regression Object Class. I decided to create an obj. class for my model since the functions to train, test, and predict are all easiest to call when they are methods within the same object. My main model used stochastic gradient decent for training the model and had basic algorithms for returning model accuracy and predictions.
+
+My second file `Presentation.py` when ran calls `Model.py` and when run creates a series of charts, graphs and statistics about the model. This file is mainly used to check the model overall is functioning and to better understand what the model is doing. The last file is `Test_Model.py` which tests every function used within the model and data cleaning process.
+
+Overall the project was a great success, I was able to apply my background in mathematical statistics to create a model that had on average a 92% accuracy for determining what a number is given pixel data about a image of a number. To test my code I ran through each function and tested it within `Test_Model.py` and created `Presentation.py` to check what the model was doing by creating vizualizations.
+
